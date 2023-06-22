@@ -25,6 +25,9 @@ test('com sucesso', async ({ page }) => {
   await modal(page, 'Suas credenciais são válidas :)')
 })
 
+
+/* CUSTOM HELPERS */
+
 const toast = async (page: Page, message: string) => {
   const target = page.locator('div[role=status]')
   await expect(target).toHaveText(message);
